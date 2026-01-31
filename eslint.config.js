@@ -8,6 +8,8 @@ export default [
     { ignores: ['dist'] },
     {
         files: ['**/*.{js,jsx}'],
-        
+        languagesOptions: {
+            ecmaVersion: '2023',
+        }
     }
 ]
