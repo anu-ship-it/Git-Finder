@@ -3,6 +3,7 @@ import globals from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import { jsx } from 'react/jsx-runtime'
 
 export default [
     { ignores: ['dist'] },
@@ -10,6 +11,19 @@ export default [
         files: ['**/*.{js,jsx}'],
         languagesOptions: {
             ecmaVersion: '2023',
-        }
+            globals: globals.browser,
+            parserOptions: {
+                ecmaVersion: 'latest',
+                ecmaFeatures: { jsx: true },
+                sourceType: 'module'
+            },
+        },
+        settings: { react: { version: '18.3' } },
+        Plugins: {
+            react,
+            'react-hooks': reactHooks,
+            'react-refresh': reactRefresh,
+        },
+        
     }
 ]
