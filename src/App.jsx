@@ -32,8 +32,11 @@ function App() {
    return (
     <div className="App" role="main">
         <div className="social-links">
-            <a href=""></a>
+            <a href="https://github.com/anu-ship-it/Git-Finder" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+            <a href="https://twitter.com/Anoop670" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+            <a href="https://www.buymeacoffee.com/anoop" target="_blank" rel="noopener noreferrer"><FaCoffee /></a>
         </div>
+        
     </div>
    )
 }
