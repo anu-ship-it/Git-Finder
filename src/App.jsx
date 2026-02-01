@@ -36,7 +36,13 @@ function App() {
             <a href="https://twitter.com/Anoop670" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
             <a href="https://www.buymeacoffee.com/anoop" target="_blank" rel="noopener noreferrer"><FaCoffee /></a>
         </div>
-        
+        <header className="header">
+        <h1 onClick={handleHeaderClick}>GitHub Buddy Finder</h1>
+        <button className="mode-toggle" onClick={toggleDarkMode}>
+            {darkMode ? <FaSun /> : <FaMoon />}
+        </button>
+        </header>
+        <p className="tagline">Find your true coding Friends💖</p>
     </div>
    )
 }
