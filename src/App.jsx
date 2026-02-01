@@ -20,5 +20,20 @@ function App() {
         localStorage.setItem('darkMode', darkMode);
     }, [darkMode]);
 
-    
+   const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle('dark-mode');
+   };
+
+   const handleHeaderClick = () => {
+    setSearchTerm('');
+   };
+
+   return (
+    <div className="App" role="main">
+        <div className="">
+
+        </div>
+    </div>
+   )
 }
