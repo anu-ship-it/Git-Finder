@@ -61,7 +61,8 @@ function App() {
                     </div>
                     <div className="feature-item">
                         <FaUsers className="feature-icon" />
-                        
+                        <h3 className="feature-title">Skill Insights</h3>
+                        <p>Visualize laguage perferences and coding activity patterns</p>
                     </div>
                 </div>
         )}
