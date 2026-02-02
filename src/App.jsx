@@ -78,6 +78,17 @@ function App() {
         {error && (
             <div className="error-container" role="alert">
                 <p>Oops! Something went wrong.</p>
+                <p className="error-message">{error}</p>
+                <button onClick={() => setSearchTerm('')} className="retry-button">
+                    Try Again
+                </button>
+            </div>
+        )}
+
+        {userData && (
+            <div className="results-container" role="region" aria-label="User Results">
+                <ProfileDisplay user={userData} />
+                
             </div>
         )}
    )
