@@ -54,7 +54,15 @@ function App() {
                 </div>
 
                 <div className="feature-list">
-                    <div className=""></div>
+                    <div className="feature-item">
+                        <FaSearch className="feature-icon" />
+                        <h3 className="feature-title">Easy Search</h3>
+                        <p>Find potential coding buddies with just a GitHub username</p>
+                    </div>
+                    <div className="feature-item">
+                        <FaUsers className="feature-icon" />
+                        
+                    </div>
                 </div>
         )}
     </div>
