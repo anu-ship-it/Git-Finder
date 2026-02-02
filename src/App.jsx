@@ -43,6 +43,20 @@ function App() {
         </button>
         </header>
         <p className="tagline">Find your true coding Friends💖</p>
+
+        {!searchTerm && (
+            <div className="landing-page" role="region" aria-label="Welcome Section">
+                <h2>Welcome to GitHub Buddy Finder</h2>
+                <p>Discover like-minded developers and build your coding network</p>
+
+                <div className="search-section">
+                    <Search onSearch={setSearchTerm} />
+                </div>
+
+                <div className="feature-list">
+                    <div className=""></div>
+                </div>
+        )}
     </div>
    )
 }
