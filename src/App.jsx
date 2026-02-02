@@ -74,5 +74,9 @@ function App() {
                 <p>Loading user data... Please wait.</p>
             </div>
         )}
+
+        {error && (
+            
+        )}
    )
 }
