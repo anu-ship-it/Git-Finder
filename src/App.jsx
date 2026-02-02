@@ -65,7 +65,9 @@ function App() {
                         <p>Visualize laguage perferences and coding activity patterns</p>
                     </div>
                 </div>
+            </div>
         )}
-    </div>
+
+        
    )
 }
