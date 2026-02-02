@@ -68,6 +68,11 @@ function App() {
             </div>
         )}
 
-        
+        {loading && (
+            <div className="loading-container" role="alert" aria-busy="true">
+                <LoadingSpinner />
+                <p>Loading user data... Please wait.</p>
+            </div>
+        )}
    )
 }
