@@ -76,7 +76,9 @@ function App() {
         )}
 
         {error && (
-            
+            <div className="error-container" role="alert">
+                <p>Oops! Something went wrong.</p>
+            </div>
         )}
    )
 }
