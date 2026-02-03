@@ -87,8 +87,7 @@ function App() {
 
         {userData && (
             <div className="results-container" role="region" aria-label="User Results">
-                <ProfileDisplay user={userData} />
-                
+                <ProfileDisplay user={userData} />  
             </div>
         )}
    )
