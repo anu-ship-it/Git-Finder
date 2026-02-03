@@ -90,9 +90,17 @@ function App() {
                 <ProfileDisplay user={userData} />
                 <div className="charts-container">
                     {languages && <LanguageChart languages={languages} />}
-                    {}
-                </div>  
+                    {activities && <ActivityChart activities={activities} />}
+                </div>
+                <BuddyList
+                    buddies={buddies}
+                    loading={buddiesLoading}
+                    searchTerm={searchTerm}
+                />    
             </div>
         )}
-   )
+    </div>    
+   );
 }
+
+export default App;
