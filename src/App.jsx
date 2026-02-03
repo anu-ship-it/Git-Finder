@@ -87,7 +87,11 @@ function App() {
 
         {userData && (
             <div className="results-container" role="region" aria-label="User Results">
-                <ProfileDisplay user={userData} />  
+                <ProfileDisplay user={userData} />
+                <div className="charts-container">
+                    {languages && <LanguageChart languages={languages} />}
+                    {}
+                </div>  
             </div>
         )}
    )
