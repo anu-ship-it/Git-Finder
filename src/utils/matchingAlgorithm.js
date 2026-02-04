@@ -26,3 +26,4 @@ const EVENT_WEIGHT = {
     CreateEvent: 0.6,
     // ... add other event types as needed
 };
+const GENDER_PERFERENCE_WEIGHT = 0.2, // How much gender preference affects overall score
