@@ -16,4 +16,13 @@ const getOctokit = () => {
     return new Octokit({ auth: token });
 };
 
-// 
+// Add new constants
+const RATE_LIMIT_DELAY = 1000; // 1 second base delay
+const MAX_RETRIES = 3;
+const EVENT_WEIGHT = {
+    PushEvent: 1.0,
+    PullRequestEvent: 1.2,
+    IssuesEvent: 0.8,
+    CreateEvent: 0.6,
+    // ... add other event types as needed
+};
