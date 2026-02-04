@@ -13,5 +13,7 @@ let tokenIndex = 0;
 const getOctokit = () => {
     const token = tokens[tokenIndex];
     tokenIndex = (tokenIndex + 1) % tokens.length;  // Rotate to the next token
-    
-}
+    return new Octokit({ auth: token });
+};
+
+// 
