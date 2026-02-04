@@ -9,4 +9,4 @@ const tokens = [
 
 let tokenIndex = 0;
 
-// Function to get the next
+// Function to get the next available Octokit instance with a rotated token
