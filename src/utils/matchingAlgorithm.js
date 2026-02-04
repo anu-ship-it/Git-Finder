@@ -43,4 +43,4 @@ const WEIGHTS = {
     ACTIVITY: 0.1   // 10% weight for activity
 };
 
-// 
+// Adjust match ratios based on user's gender
