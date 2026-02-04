@@ -26,4 +26,9 @@ const EVENT_WEIGHT = {
     CreateEvent: 0.6,
     // ... add other event types as needed
 };
-const GENDER_PERFERENCE_WEIGHT = 0.2, // How much gender preference affects overall score
+const GENDER_PERFERENCE_WEIGHT = 0.2; // How much gender preference affects overall score
+const LANGUAGE_WEIGHT = 0.2; // Reduced to 20%
+const ACTIVITY_WEIGHT = 0.2; // Reduced to 20%
+const DEFAULT_GENDER_RATIO = 0.7; // Percentage of opposite gender recommendations
+
+// Update constants with latest demographics and weights
