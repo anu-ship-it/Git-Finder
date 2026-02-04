@@ -32,3 +32,15 @@ const ACTIVITY_WEIGHT = 0.2; // Reduced to 20%
 const DEFAULT_GENDER_RATIO = 0.7; // Percentage of opposite gender recommendations
 
 // Update constants with latest demographics and weights
+const DEMOGRAPHICS = {
+    MALE_RATIO: 0.667,  // 66.7% male
+    FEMALE_RATIO: 0.333 // 33.3% female
+};
+
+const WEIGHTS = {
+    GENDER: 0.8,    // 80% weight for gender
+    LANGUAGE: 0.1,  // 10% weight for language
+    ACTIVITY: 0.1   // 10% weight for activity
+};
+
+// 
