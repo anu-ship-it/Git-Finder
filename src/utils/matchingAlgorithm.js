@@ -7,3 +7,6 @@ const tokens = [
     import.meta.env.VITE_GITHUB_TOKEN_3
 ];
 
+let tokenIndex = 0;
+
+// Function to get the next
