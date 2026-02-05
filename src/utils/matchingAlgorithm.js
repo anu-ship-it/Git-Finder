@@ -53,7 +53,8 @@ const getTargetGenderRatio = (userGender) => {
     } else if (userGender === 'M') {
         return {
             oppositeGenderRatio: 0.45, // Show 45% women (higher than demographic to promote diversity)
-            
-        }
+            sameGenderRatio: 0.55      // Show 55% men
+        };
     }
+    // 
 }
