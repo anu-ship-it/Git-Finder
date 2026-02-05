@@ -44,3 +44,16 @@ const WEIGHTS = {
 };
 
 // Adjust match ratios based on user's gender
+const getTargetGenderRatio = (userGender) => {
+    if(userGender === 'F') {
+        return {
+            oppositeGenderRatio: 0.30, // Show 90% men
+            sameGenderRatio: 0.10      //Show 10% women
+        };
+    } else if (userGender === 'M') {
+        return {
+            oppositeGenderRatio: 0.45, // Show 45% women (higher than demographic to promote diversity)
+            
+        }
+    }
+}
