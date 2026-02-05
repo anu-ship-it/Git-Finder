@@ -56,5 +56,11 @@ const getTargetGenderRatio = (userGender) => {
             sameGenderRatio: 0.55      // Show 55% men
         };
     }
-    // 
-}
+    // For unknown gender, use demographic ratios
+    return {
+        oppositeGenderRatio: DEMOGRAPHICS.MALE_RATIO,
+        sameGenderRatio: DEMOGRAPHICS.FEMALE_RATIO
+    };
+};
+
+// 
