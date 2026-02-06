@@ -109,6 +109,10 @@ const getLanguageStats = async (username) => {
             }
         }));
 
-        
+        return { languageStats, languageBytes };
+    } catch (error) {
+        throw new Error(`Failed to fetch language stats for ${username}: ${error.message}`);
     }
-}
+};
+
+// Enhanced activity analysis
