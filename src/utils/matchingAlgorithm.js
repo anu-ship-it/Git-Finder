@@ -87,6 +87,21 @@ const getLanguageStats = async (username) => {
     await checkRateLimit(octokit);
 
     try {
-        
+        const { data: repos } = await octokit.repos.listForUser({ username, per_page: 100 });
+        const languageStats = {};
+        const languageBytes = {};
+
+        await Promise.all(repos.map(async (repo) => {
+            if (repo.fork) return;
+
+            try {
+                const { data: languages } = await octokit.repos.listLanguages({
+                    owner: username,
+                    repo: repo.name,
+                });
+
+                Object.entries(languag)
+            }
+        }))
     }
 }
