@@ -100,8 +100,15 @@ const getLanguageStats = async (username) => {
                     repo: repo.name,
                 });
 
-                Object.entries(languag)
+                Object.entries(languages).forEach(([languageBytes, bytes]) => {
+                    languagesStats[lang] = (languageStats[lang] || 0) + 1;
+                    languageBytes[lang] = (languageBytes[lang] || 0) + bytes;
+                });
+            } catch (error) {
+                console.warn(`Failed to fetch languages for ${repo.name}:`, error);
             }
-        }))
+        }));
+
+        
     }
 }
