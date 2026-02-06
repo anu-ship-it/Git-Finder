@@ -69,7 +69,16 @@ const checkRateLimit = async (octokitInstance, retryCount = 0) => {
         const { data } = await octokitInstance.rateLimit.get();
         if (data.resources.core.remaining === 0) {
             const delay = RATE_LIMIT_DELAY * Math.pow(2, retryCount);
-            await
+            await new Promise(resolve => setTimeout(resolve, delay));
+            return checkRateLimit(getOctokit(), retryCount + 1);
         }
+        return data.resources.core.remaining;
+    } catch (error) {
+        if (retryCount < MAX_RETRIES) {
+            return checkRateLimit(getOctokit(), retryCount + 1);
+        }
+        throw new Error('Rate limit check failed after maximum retries');
     }
-}
+};
+
+// 
