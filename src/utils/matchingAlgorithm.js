@@ -81,4 +81,12 @@ const checkRateLimit = async (octokitInstance, retryCount = 0) => {
     }
 };
 
-// 
+// Enhanced language stats collection
+const getLanguageStats = async (username) => {
+    const octokit = getOctokit();
+    await checkRateLimit(octokit);
+
+    try {
+        
+    }
+}
