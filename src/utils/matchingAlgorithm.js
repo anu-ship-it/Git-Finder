@@ -64,3 +64,12 @@ const getTargetGenderRatio = (userGender) => {
 };
 
 // Enhanced rate limit handling with exponential backoff
+const checkRateLimit = async (octokitInstance, retryCount = 0) => {
+    try {
+        const { data } = await octokitInstance.rateLimit.get();
+        if (data.resources.core.remaining === 0) {
+            const delay = RATE_LIMIT_DELAY * Math.pow(2, retryCount);
+            await
+        }
+    }
+}
