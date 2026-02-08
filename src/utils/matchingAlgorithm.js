@@ -160,5 +160,20 @@ const calculateLanguageCompatibility = (userLangs, buddyLangs) => {
 // Enhanced activity compatibility calculation
 const calculateActivityCompatibility = (userEvents, buddyEvents) => {
     const now = new Date();
-    
-}
+    const maxAge = 30 * 24 * 60 * 1000;  // 30 days in milliseconds
+
+    const calculateScore = (events) => {
+        return events.reduce((score, events) => {
+            const age = now - event.created_at;
+            const recencyFactor = Math.max(0, 1 - (age / maxAge));
+            return score + (event.weight * recencyFactor);
+        }, 0);
+    };
+
+    const userScore = calculateScore(userEvents);
+    const buddyScore = calculateScore(buddyEvents);
+
+    return (Math.min(userScore, buddyScore) / Math.max(userScore, buddyScore)) * 100;
+};
+
+// Add new helper  function to estimate gender (Note: this is a simplified approch)
