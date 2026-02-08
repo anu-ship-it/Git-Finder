@@ -136,3 +136,8 @@ const getRecentActivity = async (username) => {
     }
 };
 
+// Enhanced language compatibility calculation
+const calculateLanguageCompatibility = (userLangs, buddyLangs) => {
+    const { languageStats: userStats, languageBytes: userBytes } = userLangs;
+    
+}
