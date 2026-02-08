@@ -129,9 +129,10 @@ const getRecentActivity = async (username) => {
         return events.map(event => ({
             type: events.type,
             created_at: new Date(events.created_at),
-            
-        }))
+            weight: EVENT_WEIGHT[event.type] || 0.5
+        }));
     } catch (error) {
-        
+        throw new Error(`Failed to fetch activity for ${username}: ${error.message}`);
     }
-}
+};
+
