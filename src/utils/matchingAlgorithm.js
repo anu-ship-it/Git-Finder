@@ -156,3 +156,9 @@ const calculateLanguageCompatibility = (userLangs, buddyLangs) => {
 
     return (compatibility / (1 + compatibility)) * 100; // Normalize to 0-100
 };
+
+// Enhanced activity compatibility calculation
+const calculateActivityCompatibility = (userEvents, buddyEvents) => {
+    const now = new Date();
+    
+}
