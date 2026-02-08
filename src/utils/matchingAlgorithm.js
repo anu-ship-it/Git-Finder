@@ -121,7 +121,16 @@ const getRecentActivity = async (username) => {
     await checkRateLimit(octokit);
 
     try {
-        const 
+        const { data: events } = await octokit.activity.listPublicEventsForUser({
+            username,
+            per_page: 100
+        });
+
+        return events.map(event => ({
+            type: events.type,
+            created_at: new Date(events.created_at),
+            
+        }))
     } catch (error) {
         
     }
