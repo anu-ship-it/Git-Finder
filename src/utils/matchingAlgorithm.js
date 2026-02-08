@@ -145,5 +145,14 @@ const calculateLanguageCompatibility = (userLangs, buddyLangs) => {
     const totalUserBytes = Object.values(userBytes).reduce((a, b) => a + b, 0);
     const totalBuddyBytes = Object.values(buddyBytes).reduce((a, b) => a + b, 0);
 
-    
-}
+    let compatibility = 0;
+    commonLanguages.forEach(lang => {
+        const userPercentage = userBytes[lang] / totalUserBytes;
+        const buddyPercentage = buddyBytes[lang] / totalBuddyBytes;
+        // Weight more heavily used languages higher
+        const usage = (userPercentage + buddyPercentage) / 2;
+        compatibility += Math.min(userPercentage, buddyPercentage) * (1 + usage);
+    });
+
+    return (compatibility / (1 + compatibility)) * 100; // Normalize to 0-100
+};
