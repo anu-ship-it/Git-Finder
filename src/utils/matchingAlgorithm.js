@@ -139,5 +139,11 @@ const getRecentActivity = async (username) => {
 // Enhanced language compatibility calculation
 const calculateLanguageCompatibility = (userLangs, buddyLangs) => {
     const { languageStats: userStats, languageBytes: userBytes } = userLangs;
+    const { languageStats: buddyStats, languageBytes: buddyBytes } = buddyLangs;
+
+    const commonLanguages = Object,keys(userStats).filter(lang => buddyStats[lang]);
+    const totalUserBytes = Object.values(userBytes).reduce((a, b) => a + b, 0);
+    const totalBuddyBytes = Object.values(buddyBytes).reduce((a, b) => a + b, 0);
+
     
 }
