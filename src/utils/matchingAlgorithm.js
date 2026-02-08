@@ -116,3 +116,13 @@ const getLanguageStats = async (username) => {
 };
 
 // Enhanced activity analysis
+const getRecentActivity = async (username) => {
+    const octokit = getOctokit();
+    await checkRateLimit(octokit);
+
+    try {
+        const 
+    } catch (error) {
+        
+    }
+}
