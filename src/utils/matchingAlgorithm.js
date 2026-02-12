@@ -200,5 +200,6 @@ const estimateGender = async (octokit, username) => {
 // Main function to find buddies based on language and activity compatibility
 export const findBuddies = async (user, preferredGender = null) => {
     const userLanguages = await getLanguageStats(user.login);
-    const userEvents =
+    const userEvents = await getRecentActivity(user.login);
+    
 }
