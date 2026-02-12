@@ -181,12 +181,18 @@ const estimateGender = async (octokit, username) => {
     try {
        const { data: user } = await octokit.users.getByUsername({ username });
 
-       // Use pronouns if available in bio
+    // Use pronouns if available in bio
        const bio = (user.bio || '').toLowerCase();
        if (bio.includes('she/her') || bio.includes('she/they')) return 'F';
-       
+       if (bio.includes('he/him') || bio.includes('he/they')) return 'M';
 
+    //  If no pronouns, use name-based estimation (optional)
+    const firstName = user.name ? user.name.split(' ')[0].toLowerCase() : '';
+    // You could integrate with a name-gender API here
+    
+    return 'U'; // Unkown/Unspecified
     } catch (error) {
-        
+    console.warn(`Failed to estimate gender for ${username}:`, error);
+    return 'U';   
     }
 }
