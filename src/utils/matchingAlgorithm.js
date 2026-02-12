@@ -198,4 +198,6 @@ const estimateGender = async (octokit, username) => {
 };
 
 // Main function to find buddies based on language and activity compatibility
-export const findBuddies = async (user,)
+export const findBuddies = async (user, preferredGender = null) => {
+    const 
+}
