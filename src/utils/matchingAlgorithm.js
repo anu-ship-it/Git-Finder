@@ -177,3 +177,10 @@ const calculateActivityCompatibility = (userEvents, buddyEvents) => {
 };
 
 // Add new helper  function to estimate gender (Note: this is a simplified approch)
+const estimateGender = async (octokit, username) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
