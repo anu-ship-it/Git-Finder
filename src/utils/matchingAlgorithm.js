@@ -183,6 +183,9 @@ const estimateGender = async (octokit, username) => {
 
        // Use pronouns if available in bio
        const bio = (user.bio || '').toLowerCase();
+       if (bio.includes('she/her') || bio.includes('she/they')) return 'F';
+       
+
     } catch (error) {
         
     }
