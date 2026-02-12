@@ -195,4 +195,7 @@ const estimateGender = async (octokit, username) => {
     console.warn(`Failed to estimate gender for ${username}:`, error);
     return 'U';   
     }
-}
+};
+
+// Main function to find buddies based on language and activity compatibility
+export const findBuddies = async (user,)
