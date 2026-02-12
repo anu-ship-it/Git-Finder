@@ -181,7 +181,8 @@ const estimateGender = async (octokit, username) => {
     try {
        const { data: user } = await octokit.users.getByUsername({ username });
 
-    //    
+       // Use pronouns if available in bio
+       const bio = (user.bio || '').toLowerCase();
     } catch (error) {
         
     }
