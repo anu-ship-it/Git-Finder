@@ -201,5 +201,7 @@ const estimateGender = async (octokit, username) => {
 export const findBuddies = async (user, preferredGender = null) => {
     const userLanguages = await getLanguageStats(user.login);
     const userEvents = await getRecentActivity(user.login);
-    
+    const octokit = getOctokit();
+
+    // Get user's gender
 }
