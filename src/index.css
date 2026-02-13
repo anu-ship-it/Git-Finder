@@ -22,5 +22,11 @@
     --secondary-color: #70f3d2;
     --background-color: #1a1a1a;
     --text-color: #f0f0f0;
+    --border-color: #444444;
+    --card-background: #2a2a2a;
+    --hover-color: #5a9ae5;
+}
+
+body {
     
 }
