@@ -18,5 +18,9 @@
 }
 
 .dark-mode {
+    --primary-color: #6ab0ff;
+    --secondary-color: #70f3d2;
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
     
 }
