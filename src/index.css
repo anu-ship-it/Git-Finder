@@ -40,5 +40,31 @@ body {
 }
 
 .App {
-    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
 }
+
+.social-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--hover-color);
+    transform: scale(1.1);
+}
+
