@@ -82,3 +82,33 @@ body {
     cursor: pointer;
 }
 
+.mode-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mode-toggle:hover {
+    color: var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+/* Search Component */
