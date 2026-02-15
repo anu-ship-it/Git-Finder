@@ -117,3 +117,8 @@ h1 {
     justify-content: center;
     margin-bottom: 4rem;
 }
+
+.search-input {
+    padding: 1rem 1.5rem;
+    
+}
