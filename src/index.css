@@ -112,3 +112,7 @@ h1 {
 }
 
 /* Search Component */
+.search-form {
+    display: flex;
+    
+}
