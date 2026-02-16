@@ -147,3 +147,10 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.search-button:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Profile Display Component */
+.
