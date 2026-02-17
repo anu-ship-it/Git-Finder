@@ -20,6 +20,7 @@ const useGitHubApi = (username) => {
 
             try {
                 // Fetch user data
+                const response = await fetch(`https://api.github.com/users/${username}`);
                 
             } catch (error) {
                 
