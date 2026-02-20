@@ -16,6 +16,15 @@ function BuddyList({ buddies, loading }) {
     }
 
     return (
-        <div className=""></div>
+        <div className="buddy-list">
+            <h3>Potential Buddies</h3>
+            <ul>
+                {buddies.map((buddy) => (
+                    <li key={buddy.id} onClick={() => handleBuddyClick(buddy)}>
+                        <img src={buddy.avatar_url} alt={buddy.login} />
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
