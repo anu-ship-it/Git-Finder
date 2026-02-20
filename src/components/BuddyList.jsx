@@ -16,6 +16,6 @@ function BuddyList({ buddies, loading }) {
     }
 
     return (
-        
+        <div className=""></div>
     )
 }
