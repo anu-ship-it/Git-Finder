@@ -14,7 +14,16 @@ function LanguageChart({ languages }) {
     return (
         <div className="language-chart">
             <h3>Top Languages</h3>
-            
+            <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                    <Pie
+                      data={data}
+                      
+                    >
+
+                    </Pie>
+                </PieChart>
+            </ResponsiveContainer>
         </div>
     )
 }
