@@ -22,6 +22,10 @@ function BuddyList({ buddies, loading }) {
                 {buddies.map((buddy) => (
                     <li key={buddy.id} onClick={() => handleBuddyClick(buddy)}>
                         <img src={buddy.avatar_url} alt={buddy.login} />
+                        <div className="buddy-info">
+                            <span className="buddy-name">{buddy.login}</span>
+                            
+                        </div>
                     </li>
                 ))}
             </ul>
