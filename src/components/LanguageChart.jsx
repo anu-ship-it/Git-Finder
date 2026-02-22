@@ -18,7 +18,6 @@ function LanguageChart({ languages }) {
                 <PieChart>
                     <Pie
                       data={data}
-                      
                     >
 
                     </Pie>
