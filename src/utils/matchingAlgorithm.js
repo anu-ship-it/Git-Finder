@@ -215,5 +215,11 @@ export const findBuddies = async (user, preferredGender = null) => {
         per_page: 100
     });
 
-    
+    const potentialBuddies = [...followers, ...following];
+    const buddyScores = [];
+
+    // Process buddies in parallel with a limit
+    await Promise.all(potentialBuddies.slice(0, 20).map(async (buddy) => {
+        const 
+    }))
 }
