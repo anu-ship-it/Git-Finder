@@ -210,5 +210,5 @@ export const findBuddies = async (user, preferredGender = null) => {
         username: user.login,
         per_page: 100
     });
-    
+    const { data: following } = 
 }
