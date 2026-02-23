@@ -204,4 +204,5 @@ export const findBuddies = async (user, preferredGender = null) => {
     const octokit = getOctokit();
 
     // Get user's gender
+    const userGender = await estimateGender
 }
