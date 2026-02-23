@@ -210,5 +210,10 @@ export const findBuddies = async (user, preferredGender = null) => {
         username: user.login,
         per_page: 100
     });
-    const { data: following } = 
+    const { data: following } = await octokit.users.users.listFollowersForUser({
+        username: user.login,
+        per_page: 100
+    });
+
+    
 }
