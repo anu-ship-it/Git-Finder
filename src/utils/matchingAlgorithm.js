@@ -204,5 +204,11 @@ export const findBuddies = async (user, preferredGender = null) => {
     const octokit = getOctokit();
 
     // Get user's gender
-    const userGender = await estimateGender
+    const userGender = await estimateGender(octokit, user.login);
+
+    const { data: followers } = await octokit.users.listFollowersForUser({
+        username: user.login,
+        per_page: 100
+    });
+    
 }
