@@ -221,6 +221,9 @@ export const findBuddies = async (user, preferredGender = null) => {
     // Process buddies in parallel with a limit
     await Promise.all(potentialBuddies.slice(0, 20).map(async (buddy) => {
         const buddyGender = await estimateGender(octokit, buddy.login);
+        const buddyLanguages = await getLanguageStats(buddy.login);
+        const buddyEvents = await getRecentActivity(buddy.login);
+
         
     }))
 }
