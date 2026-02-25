@@ -224,6 +224,9 @@ export const findBuddies = async (user, preferredGender = null) => {
         const buddyLanguages = await getLanguageStats(buddy.login);
         const buddyEvents = await getRecentActivity(buddy.login);
 
-        
+        const languageCompatibility = calculateLanguageCompatibility(userLanguages, buddyLanguages);
+        const activityCompatibility = calculateLanguageCompatibility(userEvents, buddyEvents);
+
+        // 
     }))
 }
