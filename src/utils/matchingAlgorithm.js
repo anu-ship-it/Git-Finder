@@ -245,6 +245,14 @@ export const findBuddies = async (user, preferredGender = null) => {
             genderScore * WEIGHTS.GENDER                    // 80% weight
         };
 
-        
-    }))
+        buddyScores.push({
+            ...buddy,
+            matchScore: overallScore,
+            languageCompatibility,
+            activityCompatibility,
+            gender: buddyGender
+        });
+    }));
+
+    // Sort by score and apply demographic-aware gender ratio
 }
