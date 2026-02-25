@@ -227,6 +227,7 @@ export const findBuddies = async (user, preferredGender = null) => {
         const languageCompatibility = calculateLanguageCompatibility(userLanguages, buddyLanguages);
         const activityCompatibility = calculateLanguageCompatibility(userEvents, buddyEvents);
 
-        // 
+        // Enchanced gender scoring with much higher weight
+        
     }))
 }
