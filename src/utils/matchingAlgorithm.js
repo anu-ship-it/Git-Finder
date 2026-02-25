@@ -230,7 +230,15 @@ export const findBuddies = async (user, preferredGender = null) => {
         // Enchanced gender scoring with much higher weight
         let genderScore = 1.0;
         if (userGender !== 'U' && buddyGender !== 'U') {
-            
+            if (userGender === 'F') {
+                // Women see higher scores for men matches
+                genderScore = buddyGender === 'M' ? 2.0 : 0.5;
+            } else if (userGender === 'M') {
+                // Men see higher scores for women matches, but abjusted for pool size
+                genderScore = buddyGender === 'F' ? 2.5 : 0.4; // Higher multiplier due to smaller pool
+            }
         }
+
+        
     }))
 }
