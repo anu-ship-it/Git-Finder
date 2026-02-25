@@ -239,6 +239,12 @@ export const findBuddies = async (user, preferredGender = null) => {
             }
         }
 
+        const overallScore = {
+            languageCompatibility * WEIGHTS.LANGUAGE +      // 10% weight
+            activityCompatibility * WEIGHTS.ACTIVITY +      // 10% weight
+            genderScore * WEIGHTS.GENDER                    // 80% weight
+        };
+
         
     }))
 }
