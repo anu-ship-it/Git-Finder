@@ -261,5 +261,8 @@ export const findBuddies = async (user, preferredGender = null) => {
     const oppositeGender = sortedScores.filter(b => 
         b.gender !== 'U' && b.gender !== userGender
     );
+
+
+    // Calculate number of results for each for each gender based on ratios
     
 }
