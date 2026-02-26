@@ -264,5 +264,8 @@ export const findBuddies = async (user, preferredGender = null) => {
 
 
     // Calculate number of results for each for each gender based on ratios
-    
+    const totalResults = Math.min(sortedScores.length, 20); // Limit to top 20 results
+    const { oppositeGenderRatio, sameGenderRatio } = getTargetGenderRatio(userGender);
+    const numOpposite = Math.round(totalResults * oppositeGenderRatio);
+    const numSame = totalResults - numOpposite;
 }
