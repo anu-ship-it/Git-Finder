@@ -268,4 +268,9 @@ export const findBuddies = async (user, preferredGender = null) => {
     const { oppositeGenderRatio, sameGenderRatio } = getTargetGenderRatio(userGender);
     const numOpposite = Math.round(totalResults * oppositeGenderRatio);
     const numSame = totalResults - numOpposite;
-}
+
+    return [
+        ...oppositeGender.slice(0, numOpposite),
+        ...sameGenderRatio.slice(0, numSame)
+    ];
+};
