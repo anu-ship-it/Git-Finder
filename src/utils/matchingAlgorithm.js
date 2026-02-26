@@ -255,5 +255,8 @@ export const findBuddies = async (user, preferredGender = null) => {
     }));
 
     // Sort by score and apply demographic-aware gender ratio
+    const sortedScores = buddyScores.sort((a, b) => b.matchScore - a.matchScore);
+
+    // Split results by gender
     
 }
