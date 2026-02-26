@@ -258,5 +258,8 @@ export const findBuddies = async (user, preferredGender = null) => {
     const sortedScores = buddyScores.sort((a, b) => b.matchScore - a.matchScore);
 
     // Split results by gender
+    const oppositeGender = sortedScores.filter(b => 
+        b.gender !== 'U' && b.gender !== userGender
+    );
     
 }
